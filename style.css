@@ -1,0 +1,132 @@
+body {
+    color: rgba(46, 213, 116, 0.36);
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    font-family: orbitron, sans-serif;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center
+    
+    
+}
+
+/* From Uiverse.io by Smit-Prajapati */ 
+.button {
+    /* in scss with just one variable i can change opacity with rgba(variable, opacity) but in css it's not possible so i have used three seperate variables */
+    /* with hue-rotate color can be changed */
+    --main-color: rgb(46, 213, 115);
+    --main-bg-color: rgba(46, 213, 116, 0.36);
+    --pattern-color: rgba(46, 213, 116, 0.073);
+    
+  
+    /* change this rotation value */
+    filter: hue-rotate(0deg);
+  
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    background: radial-gradient(
+        circle,
+        var(--main-bg-color) 0%,
+        rgba(0, 0, 0, 0) 95%
+      ),
+      linear-gradient(var(--pattern-color) 1px, transparent 1px),
+      linear-gradient(to right, var(--pattern-color) 1px, transparent 1px);
+    background-size:
+      cover,
+      15px 15px,
+      15px 15px;
+    background-position:
+      center center,
+      center center,
+      center center;
+    border-image: radial-gradient(
+        circle,
+        var(--main-color) 0%,
+        rgba(0, 0, 0, 0) 100%
+      )
+      1;
+    border-width: 1px 0 1px 0;
+    color: var(--main-color);
+    padding: 1rem 3rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    transition: background-size 0.2s ease-in-out;
+  }
+  
+  .button:hover {
+    background-size:
+      cover,
+      10px 10px,
+      10px 10px;
+  }
+  .button:active {
+    filter: hue-rotate(250deg);
+  }
+
+
+  /* From Uiverse.io by 20essentials */ 
+.loader {
+    --size: 40px;
+    width: var(--size);
+    height: var(--size);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 100%;
+    transform-style: preserve-3d;
+    perspective: 5000px;
+    animation: rotar 10s linear infinite alternate both;
+  
+    .side {
+      width: var(--size);
+      height: var(--size);
+      position: absolute;
+      background: repeating-linear-gradient(
+          to right,
+          transparent 1% 9%,
+          #0f0 9% 10%
+        ),
+        repeating-linear-gradient(to top, transparent 1% 9%, #0f0 9% 10%);
+      background-color: #0008;
+    }
+  
+    .behind {
+      transform: translateZ(calc(-1 * var(--size)));
+    }
+  
+    .right {
+      transform-origin: 100% 50%;
+      transform: rotateY(-90deg);
+    }
+  
+    .left {
+      transform-origin: 0% 50%;
+      transform: rotateY(90deg);
+    }
+  
+    .top {
+      transform-origin: 50% 0;
+      transform: rotateX(-90deg);
+    }
+  
+    .bottom {
+      transform-origin: 50% 100%;
+      transform: rotateX(90deg);
+    }
+  }
+  
+  @keyframes rotar {
+    0% {
+      transform: translate(-50%, -50%) rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotateX(360deg) rotateY(360deg);
+    }
+  }
+  
+  
