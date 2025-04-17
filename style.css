@@ -14,6 +14,17 @@ body {
     
 }
 
+
+.Time {
+      font-size: 100px;
+      
+      color: rgba(46, 213, 116, 0.36);
+      text-shadow: 0 0 10px rgba(46, 213, 116, 0.36), 0 0 20px rgba(46, 213, 116, 0.36), 0 0 30px rgba(46, 213, 116, 0.36), 0 0 40px rgba(46, 213, 116, 0.36), 0 0 50px rgba(46, 213, 116, 0.36), 0 0 60px rgba(46, 213, 116, 0.36), 0 0 calc(70px + (var(--size) * -1)) rgba(46, 213, 116, .5);
+
+    
+   
+
+}
 /* From Uiverse.io by Smit-Prajapati */ 
 .button {
     /* in scss with just one variable i can change opacity with rgba(variable, opacity) but in css it's not possible so i have used three seperate variables */
